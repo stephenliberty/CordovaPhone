@@ -8,32 +8,42 @@
 
 /* Begin PBXFileReference section */
 		27401FB618AACD1600C5AA28 /* plugin.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = plugin.xml; sourceTree = "<group>"; };
-		27401FB918AAD01200C5AA28 /* Phone.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Phone.h; sourceTree = "<group>"; };
-		27401FBA18AAD01200C5AA28 /* Phone.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Phone.m; sourceTree = "<group>"; };
+		27401FBD18AADEA100C5AA28 /* Phone.java */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.java; path = Phone.java; sourceTree = "<group>"; };
+		27401FBF18AADEA100C5AA28 /* Phone.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Phone.h; sourceTree = "<group>"; };
+		27401FC018AADEA100C5AA28 /* Phone.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Phone.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
 		27401FAF18AACD0300C5AA28 = {
 			isa = PBXGroup;
 			children = (
-				27401FB718AAD01200C5AA28 /* src */,
+				27401FBB18AADEA100C5AA28 /* src */,
 				27401FB618AACD1600C5AA28 /* plugin.xml */,
 			);
 			sourceTree = "<group>";
 		};
-		27401FB718AAD01200C5AA28 /* src */ = {
+		27401FBB18AADEA100C5AA28 /* src */ = {
 			isa = PBXGroup;
 			children = (
-				27401FB818AAD01200C5AA28 /* ios */,
+				27401FBC18AADEA100C5AA28 /* android */,
+				27401FBE18AADEA100C5AA28 /* ios */,
 			);
 			path = src;
 			sourceTree = "<group>";
 		};
-		27401FB818AAD01200C5AA28 /* ios */ = {
+		27401FBC18AADEA100C5AA28 /* android */ = {
 			isa = PBXGroup;
 			children = (
-				27401FB918AAD01200C5AA28 /* Phone.h */,
-				27401FBA18AAD01200C5AA28 /* Phone.m */,
+				27401FBD18AADEA100C5AA28 /* Phone.java */,
+			);
+			path = android;
+			sourceTree = "<group>";
+		};
+		27401FBE18AADEA100C5AA28 /* ios */ = {
+			isa = PBXGroup;
+			children = (
+				27401FBF18AADEA100C5AA28 /* Phone.h */,
+				27401FC018AADEA100C5AA28 /* Phone.m */,
 			);
 			path = ios;
 			sourceTree = "<group>";
