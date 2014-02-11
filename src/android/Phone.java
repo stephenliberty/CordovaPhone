@@ -18,7 +18,7 @@ import android.content.pm.ResolveInfo;
 
         @Override
         public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
-            if(action.equals("canDevicePlaceACall") != true) {
+            if(action.equals("canDevicePlaceAPhoneCall") != true) {
                 return false;
             }
             Intent callIntent = new Intent(Intent.ACTION_CALL);
