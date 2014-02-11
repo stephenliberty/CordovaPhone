@@ -20,8 +20,8 @@ import android.content.pm.ResolveInfo;
         public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
             Intent callIntent = new Intent(Intent.ACTION_CALL);
             callIntent.setData(Uri.parse("tel:5551231234"));
-            List<ResolveInfo> callAppsList = getPackageManager().queryIntentActivities(callIntent, 0);
-            System.out.println(callAppsList.length);
+            List<ResolveInfo> callAppsList = Context.getPackageManager().queryIntentActivities(callIntent, 0);
+            System.out.println(callAppsList.size());
             System.out.println(callAppsList);
             if(callAppsList.size() > 0) {
                 callbackContext.success();
