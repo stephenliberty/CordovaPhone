@@ -10,9 +10,17 @@
         <config-file target="config.xml" parent="/*">
             <feature name="CordovaPhone">
                 <param name="ios-package" value="Phone"/>
+                <param name="ios-package" value="Phone"/>
             </feature>
         </config-file>
         <header-file src="src/ios/Phone.h" />
         <source-file src="src/ios/Phone.m" />
+    </platform>
+    <platform name="android">
+        <config-file target="config.xml" parent="/*">
+            <feature name="CordovaPhone">
+                <param name="android-package" value="org.vertafore.cordova.Phone"/>
+            </feature>
+        </config-file>
     </platform>
 </plugin>

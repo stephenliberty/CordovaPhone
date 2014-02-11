@@ -1,4 +1,4 @@
-package org.apache.cordova.plugin;
+package org.vertafore.cordova;
 
     import org.apache.cordova.CordovaPlugin;
     import org.apache.cordova.CallbackContext;
@@ -8,7 +8,7 @@ package org.apache.cordova.plugin;
     /**
      * This class echoes a string called from JavaScript.
      */
-    public class Echo extends CordovaPlugin {
+    public class Phone extends CordovaPlugin {
 
         @Override
         public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
