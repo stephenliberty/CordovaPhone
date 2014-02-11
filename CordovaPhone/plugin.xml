@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    id="org.apache.cordova.device" version="0.2.3">
+    <name>CordovaPhone</name>
+    <description>Cordova Phone Check Plugin</description>
+    <license>Do not use.</license>
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="CordovaPhone">
+                <param name="ios-package" value="Phone"/>
+            </feature>
+        </config-file>
+        <header-file src="src/ios/Phone.h" />
+        <source-file src="src/ios/Phone.m" />
+    </platform>
+</plugin>
