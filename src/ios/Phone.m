@@ -4,7 +4,7 @@
 #import <CoreTelephony/CTCarrier.h>
 
 
-@implementation Phone {
+@implementation Phone
     - (void)canDevicePlaceAPhoneCall:(CDVInvokedUrlCommand*)command {
         CDVPluginResult* pluginResult = nil;
         // Check if the device can place a phone call
@@ -25,5 +25,5 @@
         }
         [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
     }
-}
+
 @end
