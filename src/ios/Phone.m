@@ -1,4 +1,5 @@
 #import "Phone.h"
+#import <Cordova/CDV.h>
 #import <CoreTelephony/CTTelephonyNetworkInfo.h>
 #import <CoreTelephony/CTCarrier.h>
 
