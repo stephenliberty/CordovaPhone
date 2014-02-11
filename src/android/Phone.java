@@ -7,6 +7,8 @@ package org.vertafore.cordova;
     import org.json.JSONException;
 
     import android.content.Intent;
+import android.net.Uri;
+import android.content.pm.ResolveInfo;
 
     /**
      * This class echoes a string called from JavaScript.
@@ -23,7 +25,7 @@ package org.vertafore.cordova;
             if(callAppsList.length > 0) {
                 callbackContext.success();
             } else {
-                callbackContext.error();
+                callbackContext.error("");
             }
         }
     }
