@@ -10,7 +10,7 @@
         // Check if the device can place a phone call
         if ([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"tel://"]]) {
             // Device supports phone calls, lets confirm it can place one right now
-            CTTelephonyNetworkInfo *netInfo = [[[CTTelephonyNetworkInfo alloc] init] autorelease];
+            CTTelephonyNetworkInfo *netInfo = [[[CTTelephonyNetworkInfo alloc] init]];
             CTCarrier *carrier = [netInfo subscriberCellularProvider];
             NSString *mnc = [carrier mobileNetworkCode]; 
             if (([mnc length] == 0) || ([mnc isEqualToString:@"65535"])) {
