@@ -3,7 +3,10 @@ package org.vertafore.cordova;
     import org.apache.cordova.CordovaPlugin;
     import org.apache.cordova.CallbackContext;
     import android.telephony.TelephonyManager;
-    import android.intent;
+    import org.json.JSONArray;
+    import org.json.JSONException;
+
+    import android.Intent;
 
     /**
      * This class echoes a string called from JavaScript.
