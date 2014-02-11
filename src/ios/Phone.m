@@ -4,7 +4,7 @@
 
 
 @implementation Phone {
-    - (void) canDevicePlaceAPhoneCall:(CDVInvokedUrlCommand*)command {
+    - (void)canDevicePlaceAPhoneCall:(CDVInvokedUrlCommand*)command {
         CDVPluginResult* pluginResult = nil;
         // Check if the device can place a phone call
         if ([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"tel://"]]) {
