@@ -15,6 +15,8 @@ package org.vertafore.cordova;
             Intent callIntent = new Intent(Intent.ACTION_CALL);
             callIntent.setData(Uri.parse("tel:5551231234"));
             List<ResolveInfo> callAppsList = context.getPackageManager().queryIntentActivities(callIntent, 0);
+            System.out.println(callAppsList.length);
+            System.out.println(callAppsList);
             if(callAppsList.length > 0) {
                 callbackContext.success();
             } else {
