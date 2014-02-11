@@ -25,7 +25,7 @@ import android.content.pm.ResolveInfo;
             if(callAppsList.length > 0) {
                 callbackContext.success();
             } else {
-                callbackContext.error("");
+                callbackContext.error("No handler");
             }
         }
     }
