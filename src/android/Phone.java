@@ -5,7 +5,8 @@ package org.vertafore.cordova;
     import android.telephony.TelephonyManager;
     import org.json.JSONArray;
     import org.json.JSONException;
-
+import android.content.Context;
+import java.util.List;
     import android.content.Intent;
 import android.net.Uri;
 import android.content.pm.ResolveInfo;
