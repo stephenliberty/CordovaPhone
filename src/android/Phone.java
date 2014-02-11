@@ -18,9 +18,12 @@ import android.content.pm.ResolveInfo;
 
         @Override
         public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
+            if(action.equals("canDevicePlaceACall") != true) {
+                return false;
+            }
             Intent callIntent = new Intent(Intent.ACTION_CALL);
             callIntent.setData(Uri.parse("tel:5551231234"));
-            List<ResolveInfo> callAppsList = this.getPackageManager().queryIntentActivities(callIntent, 0);
+            List<ResolveInfo> callAppsList = this.cordova.getActivity().getApplicationContext().getPackageManager().queryIntentActivities(callIntent, 0);
             System.out.println(callAppsList.size());
             System.out.println(callAppsList);
             if(callAppsList.size() > 0) {
@@ -28,5 +31,6 @@ import android.content.pm.ResolveInfo;
             } else {
                 callbackContext.error("No handler");
             }
+            return true;
         }
     }
