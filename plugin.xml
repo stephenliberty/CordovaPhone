@@ -22,5 +22,6 @@
                 <param name="android-package" value="org.vertafore.cordova.Phone"/>
             </feature>
         </config-file>
+        <source-file src="src/android/Phone.java" target-dir="src/org/vertafore/cordova/" />
     </platform>
 </plugin>
