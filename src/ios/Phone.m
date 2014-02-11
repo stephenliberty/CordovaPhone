@@ -1,10 +1,10 @@
-#import <Phone.h>
+#import "Phone.h"
 #import <CoreTelephony/CTTelephonyNetworkInfo.h>
 #import <CoreTelephony/CTCarrier.h>
 
 
 @implementation Phone {
-    -(void)canDevicePlaceAPhoneCall:(CDVInvokedUrlCommand*)command {
+    - (void) canDevicePlaceAPhoneCall:(CDVInvokedUrlCommand*)command {
         CDVPluginResult* pluginResult = nil;
         // Check if the device can place a phone call
         if ([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"tel://"]]) {
@@ -25,3 +25,4 @@
         [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
     }
 }
+@end
