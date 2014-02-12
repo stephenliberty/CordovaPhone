@@ -41,7 +41,8 @@ public class Phone extends CordovaPlugin {
         Intent callIntent = new Intent(Intent.ACTION_DIAL);
         callIntent.setData(Uri.parse("tel:1231231234"));
         List<ResolveInfo> callAppsList = this.cordova.getActivity().getApplicationContext().getPackageManager().queryIntentActivities(callIntent, PackageManager.MATCH_DEFAULT_ONLY);
-        if(callAppsList.size() > 1) {
+        System.out.println(callAppsList.toArray());
+        if(callAppsList.size() > 0) {
             callbackContext.success();
         } else {
             callbackContext.error("No handler");
