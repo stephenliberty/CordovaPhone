@@ -17,17 +17,21 @@ import android.content.pm.PackageManager;
  */
 public class Phone extends CordovaPlugin {
     
+    private enum Actions {
+        canDevicePlaceAPhoneCall,
+        canDeviceSendSMS
+    }
+    
     @Override
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
-        switch(action){
-            case "canDevicePlaceAPhoneCall":
+        Actions currentAction = Actions.valueOf(action);
+        switch(currentAction){
+            case canDevicePlaceAPhoneCall:
                 this.canDevicePlaceAPhoneCall(callbackContext);
                 return true;
-                break;
-            case "canDeviceSendSMS":
+            case canDeviceSendSMS:
                 this.canDeviceSendSMS(callbackContext);
                 return true;
-                break;
         }
         
         return false;
