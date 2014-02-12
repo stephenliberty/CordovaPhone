@@ -4,4 +4,6 @@
 
 - (void)canDevicePlaceAPhoneCall:(CDVInvokedUrlCommand*)command;
 
+- (void)canDeviceSendSMS:(CDVInvokedUrlCommand*)command;
+
 @end

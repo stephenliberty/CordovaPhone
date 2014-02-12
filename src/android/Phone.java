@@ -19,19 +19,39 @@ public class Phone extends CordovaPlugin {
     
     @Override
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
-        if(action.equals("canDevicePlaceAPhoneCall") != true) {
-            return false;
+        switch(action){
+            case "canDevicePlaceAPhoneCall":
+                this.canDevicePlaceAPhoneCall(callbackContext);
+                return true;
+                break;
+            case "canDeviceSendSMS":
+                this.canDeviceSendSMS(callbackContext);
+                return true;
+                break;
         }
+        
+        return false;
+    }
+    
+    canDevicePlaceAPhoneCall(CallbackContext callbackContext) {
         Intent callIntent = new Intent(Intent.ACTION_DIAL);
-        callIntent.setData(Uri.parse("tel:5551231234"));
+        callIntent.setData(Uri.parse("tel:1231231234"));
         List<ResolveInfo> callAppsList = this.cordova.getActivity().getApplicationContext().getPackageManager().queryIntentActivities(callIntent, PackageManager.MATCH_DEFAULT_ONLY);
-        System.out.println(callAppsList.size());
-        System.out.println(callAppsList);
         if(callAppsList.size() > 0) {
             callbackContext.success();
         } else {
             callbackContext.error("No handler");
         }
-        return true;
+    }
+    
+    canDeviceSendSMS(CallbackContext callbackContext) {
+        Intent callIntent = new Intent(Intent.CATEGORY_APP_MESSAGING);
+        callIntent.setData(Uri.parse("sms:1231231234"));
+        List<ResolveInfo> callAppsList = this.cordova.getActivity().getApplicationContext().getPackageManager().queryIntentActivities(callIntent, PackageManager.MATCH_DEFAULT_ONLY);
+        if(callAppsList.size() > 0) {
+            callbackContext.success();
+        } else {
+            callbackContext.error("No handler");
+        }
     }
 }
