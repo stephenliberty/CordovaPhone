@@ -33,7 +33,7 @@ public class Phone extends CordovaPlugin {
         return false;
     }
     
-    canDevicePlaceAPhoneCall(CallbackContext callbackContext) {
+    public void canDevicePlaceAPhoneCall(CallbackContext callbackContext) {
         Intent callIntent = new Intent(Intent.ACTION_DIAL);
         callIntent.setData(Uri.parse("tel:1231231234"));
         List<ResolveInfo> callAppsList = this.cordova.getActivity().getApplicationContext().getPackageManager().queryIntentActivities(callIntent, PackageManager.MATCH_DEFAULT_ONLY);
@@ -44,7 +44,7 @@ public class Phone extends CordovaPlugin {
         }
     }
     
-    canDeviceSendSMS(CallbackContext callbackContext) {
+    public void canDeviceSendSMS(CallbackContext callbackContext) {
         Intent callIntent = new Intent(Intent.CATEGORY_APP_MESSAGING);
         callIntent.setData(Uri.parse("sms:1231231234"));
         List<ResolveInfo> callAppsList = this.cordova.getActivity().getApplicationContext().getPackageManager().queryIntentActivities(callIntent, PackageManager.MATCH_DEFAULT_ONLY);
